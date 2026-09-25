@@ -1,6 +1,6 @@
 # Steer-to-Detect (S2D)
 
-**Steer-to-Detect: Probing Hidden Representations for Detection of LLM-Generated Texts**
+**Steer-to-Detect: Probing Hidden Representations for Detection of LLM-Generated Texts (NeurIPS 2026)**
 
 ## Installation
 
