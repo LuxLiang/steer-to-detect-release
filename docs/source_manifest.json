@@ -1,0 +1,8 @@
+{
+  "note": "Checksums of the three input research scripts before extraction. Paths are source-relative.",
+  "files": {
+    "s2d_train.py": "67b78a42ca3d640d8cb7a9d5cfc8aced6adc5048a8db7dacf36baff362402618",
+    "s2d_eval.py": "b256ec3bf2b24e6fb249d9944cd4dfdfd969cef3258a3b0b83d531f07629895b",
+    "s2d_wo_steer.py": "92b146c4851393996f745cf76e25608633605e87f899d8a225fde9797b41e35d"
+  }
+}

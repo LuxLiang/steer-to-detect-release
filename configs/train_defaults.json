@@ -1,0 +1,20 @@
+{
+  "max_train_pairs": 512,
+  "steer_layer": 11,
+  "lam": 2.0,
+  "steer_pos": "residual",
+  "readout_last_n_layers": 8,
+  "last_token_ratio": 0.25,
+  "lr": 0.001,
+  "epochs": 10,
+  "batch_size": 8,
+  "cos_temp": 0.4,
+  "ema_decay": 0.99,
+  "num_exemplars": 64,
+  "grad_clip": 1.0,
+  "l2_reg": 0.0,
+  "max_length": 2048,
+  "init_scale": 0.0,
+  "seed": 2025,
+  "model_dtype": "bfloat16"
+}

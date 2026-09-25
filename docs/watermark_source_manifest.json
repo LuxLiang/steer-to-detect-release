@@ -1,0 +1,10 @@
+{
+  "note": "Research-source checksums. Release adapters and data protocol are documented separately; not a claim of paper-result equivalence.",
+  "files": {
+    "watermarking_gm/gumbel.py": "7da41e462e665979a15c960cec6c91199fb7f20914cd5b196d8a0366232174f3",
+    "watermarking_gr/gr_gen.py": "d34a030ac65b062c9622bcf7c9d84bf380532e32587e6b0e0f4aa0355b3e1460",
+    "watermarking_gr/eval_gr_from_json.py": "616a7111771a1cb8269cf421c128982ab75da0ce19e6da3d67e016d3ba0f5026",
+    "watermarking_synid/watermark/synthid/synthid.py": "91acf278d6fda4b0a7009e23755d2e8bd88189205508eade88e0029c21f1b71e",
+    "watermarking_synid/config/SynthID.json": "8cd5f514c3703a0401080877c18b7864c00acf5c880a670dfacb766422a52543"
+  }
+}

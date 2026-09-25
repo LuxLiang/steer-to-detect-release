@@ -1,0 +1,18 @@
+[
+  {
+    "human_text": "I was thinking about the ocean today. It reminded me of a small surprise.",
+    "direct_prompt": "This example discusses the ocean. Several relevant observations can be considered."
+  },
+  {
+    "human_text": "I was thinking about the books today. It reminded me of a small surprise.",
+    "direct_prompt": "This example discusses the books. Several relevant observations can be considered."
+  },
+  {
+    "human_text": "I was thinking about the mountain today. It reminded me of a small surprise.",
+    "direct_prompt": "This example discusses the mountain. Several relevant observations can be considered."
+  },
+  {
+    "human_text": "I was thinking about the window today. It reminded me of a small surprise.",
+    "direct_prompt": "This example discusses the window. Several relevant observations can be considered."
+  }
+]
