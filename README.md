@@ -1,6 +1,6 @@
 # Steer-to-Detect (S2D)
 
-**Steer-to-Detect: Probing Hidden Representations for Detection of LLM-Generated Texts (NeurIPS 2026)**
+**Steer-to-Detect: Probing Hidden Representations for Detection of LLM-Generated Texts (NeurIPS 2026).**
 
 ## Installation
 
@@ -106,10 +106,3 @@ See [validation](docs/validation.md) and [release status](docs/release_status.md
 
 Research checkpoints contain NumPy arrays and use `weights_only=False`; load
 only trusted checkpoints and use the same base model as training.
-
-## Citation and license
-
-Paper link, author list, and citation metadata are pending.
-Original project code is released under the [MIT License](LICENSE). The
-MarkLLM-derived SynthID core retains its Apache-2.0 license; see
-[third-party notices](THIRD_PARTY_NOTICES.md).
