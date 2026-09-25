@@ -2,14 +2,9 @@
 
 **Steer-to-Detect: Probing Hidden Representations for Detection of LLM-Generated Texts**
 
-S2D learns a steering vector on a frozen language model and detects generated
-text using its hidden representations. This repository includes training,
-evaluation, a no-steering ablation, and Gumbel/KGW/SynthID watermark experiments.
-
 ## Installation
 
-Python 3.11 is the locally tested version. Install a PyTorch build appropriate
-for your hardware, then install the dependencies:
+Python 3.11 is the locally tested version. 
 
 ```bash
 python -m venv .venv
