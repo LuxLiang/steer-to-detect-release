@@ -1,10 +1,12 @@
 # Steer-to-Detect (S2D)
 
-**Steer-to-Detect: Probing Hidden Representations for Detection of LLM-Generated Texts (NeurIPS 2026).**
+**Steer-to-Detect: Probing Hidden Representations for Detection of LLM-Generated Texts (NeurIPS 2026)**
+
+Luxu Liang (Tsinghua), Xiang Li (UPenn)
 
 ## Installation
 
-Python 3.11 is the locally tested version. 
+Python 3.11 is the locally tested version.
 
 ```bash
 python -m venv .venv
@@ -55,13 +57,11 @@ python -m watermarking.evaluate --help
 python -m watermarking.export_pairs --help
 ```
 
-See the [watermark guide](docs/watermarking.md) for complete commands and protocol
-changes from the historical scripts. Native scores use continuation tokens only.
+See the [watermark guide](docs/watermarking.md) for commands and scoring details.
 
 ## Baselines
 
-We use the following comparison methods in our research experiments. Their code
-is not bundled; references and local adaptation notes are provided here.
+References for comparison methods:
 
 | Baseline | Reference implementation or paper |
 | --- | --- |
@@ -77,32 +77,15 @@ is not bundled; references and local adaptation notes are provided here.
 | L2D (Learn-to-Distance) | [Official implementation](https://github.com/Mamba413/L2D) |
 | RepreGuard | [Official implementation](https://github.com/Chen-X666/RepreGuard) |
 
-
-See [baseline notes](docs/baselines.md) for implementation details: the local
-LogRank scorer is not LRR, and the RAIDAR-named adapter uses AdaDist components.
-
-## Repository layout
-
-| Path | Purpose |
-| --- | --- |
-| `train.py`, `evaluate.py`, `evaluate_no_steer.py` | S2D command-line entry points |
-| `s2d/` | Training, steering, readout, data, and metrics |
-| `watermarking/` | Watermark generation, detection, and S2D export |
-| `configs/`, `examples/` | Defaults and synthetic examples |
-| `scripts/`, `tests/` | Utilities and offline tests |
-| `docs/` | Usage, protocols, provenance, and validation |
-
-## Tests and scope
+## Tests
 
 ```bash
 python -m pip install -r requirements-dev.txt
 python -m pytest -q
 ```
 
-CPU tiny-model tests cover S2D and all three watermark workflows. Real-model GPU
-results, multi-GPU execution, and full paper reproduction remain unverified.
-Datasets, base model weights, and trained release checkpoints are not included.
-See [validation](docs/validation.md) and [release status](docs/release_status.md).
+CPU tiny-model tests cover S2D and all three watermark workflows.
+See [validation](docs/validation.md).
 
 Research checkpoints contain NumPy arrays and use `weights_only=False`; load
 only trusted checkpoints and use the same base model as training.

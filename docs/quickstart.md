@@ -4,10 +4,8 @@ Run these commands from the repository root after installing dependencies.
 
 ## Train and evaluate
 
-These commands create a **random, tiny Llama**, then run actual training and
-held-out evaluation. The example pairs are synthetic format fixtures, not real
-human/AI provenance labels. Their metrics are not evidence of detection quality.
-No pretrained model or benchmark download is needed after installing dependencies.
+The example uses a random tiny Llama and synthetic data to check the workflow.
+No model download is needed.
 
 ```bash
 python scripts/create_tiny_model.py outputs/tiny-model
@@ -50,6 +48,5 @@ This preserves the existing **fixed-token** ablation: it recomputes class centro
 from training representations without steering, using the last 64 valid tokens by
 default. Main S2D uses a token **ratio**. This is not a controlled “steering only”
 comparison; see the reproduction notes before interpreting its results.
-
 
 For watermark examples, see [watermarking.md](watermarking.md).

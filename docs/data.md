@@ -25,12 +25,6 @@ the original attack-evaluation protocol. Use `--valid_llm_field` and
 `--valid_human_field` for a different validation schema. The original no-steering
 ablation uses its resolved field names for all splits.
 
-The research workspace contains DetectRL and RAID data. This release does not
-redistribute those files. Acquire the intended benchmark from its original
-maintainers and use its permitted preprocessing and split protocol. The exact
-upstream versions, download links, preprocessing scripts, split manifests, and
-checksums for the paper are still release tasks; do not infer them from filenames.
-
 `--max_train_pairs` uses the leading pairs, not a fresh random split. The original
 `--bootstrap_samples` option samples pairs **without replacement**, despite its
 name; `--bootstrap_runs` repeats that sampling. This behavior is preserved.

@@ -1,7 +1,7 @@
 # Watermark experiments
 
 This release includes generation, native watermark detection, and export for S2D
-for three methods present in the research workspace:
+for three methods:
 
 | CLI name | Implementation | Native score |
 | --- | --- | --- |
@@ -72,8 +72,7 @@ SynthID applies temperature and top-k inside its processor, so a second external
 warper is disabled. Generation is sequential, one record at a time, on one device.
 
 Default CPU precision is float32; CUDA defaults to bfloat16. Use `--dtype` for an
-explicit choice. Model loading uses a single device; multi-GPU loading is not
-provided. `--key` controls Gumbel/KGW seeds, and `--gamma` / `--delta` control KGW.
+explicit choice. Model loading uses a single device. `--key` controls Gumbel/KGW seeds, and `--gamma` / `--delta` control KGW.
 SynthID uses the entire supplied `--synthid_config`, copied into output metadata.
 Existing output files are refused unless `--overwrite` is explicitly supplied.
 
@@ -139,26 +138,4 @@ the same PyTorch version for reproducibility. CUDA-generated artifacts cannot be
 assumed to have matching scores on CPU. Generation seed and watermark keys are
 experimental parameters, not authentication secrets.
 
-## Differences from historical scripts
-
-This is a documented, consistent release protocol, **not a promise of bitwise
-reproduction of historical watermark tables**:
-
-- Removed hard-coded local paths, working-directory imports, and implicit cache reuse.
-- Use exact token IDs and a single shared prompt; no extra prompt special tokens
-  are introduced by re-tokenization.
-- Exclude prompts consistently. The old KGW detector included the prompt window.
-- Store full token IDs for all three sources, vocabulary size, device, seed, and config.
-- Create a new SynthID processor for each independent generation, avoiding state
-  carry-over between records; avoid the old fixed-50-token wrapper.
-- Slice SynthID text into continuation-only text before S2D export; the old wrapper
-  returned a full decoded sequence.
-- Require enough human tokens and fixed model continuation lengths for matched
-  comparisons. The old drivers used different early-stop/filtering rules.
-- Respect explicit top-k for all methods; historical Gumbel relied on model defaults.
-- Include the mean-g SynthID detector, not the old suite of six pivotal transforms,
-  Bayesian detector training, visualization framework, or pickle caches.
-
-Checksums identify the original inputs in `watermark_source_manifest.json`.
-Third-party provenance and license text are in [the notices](../THIRD_PARTY_NOTICES.md).
-GPU behavior and real-model paper results still require validation.
+See [third-party notices](../THIRD_PARTY_NOTICES.md) for provenance and licenses.
